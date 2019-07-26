@@ -61,15 +61,15 @@ def process_hud_alert(hud_alert, audible_alert):
   sound2 = 0
 
   if hud_alert == VisualAlert.fcw:
-    fcw = 1
+    fcw = 0
   elif hud_alert == VisualAlert.steerRequired:
-    steer = 1
+    steer = 0
 
   if audible_alert == AudibleAlert.chimeWarningRepeat:
-    sound1 = 1
+    sound1 = 0
   elif audible_alert != AudibleAlert.none:
     # TODO: find a way to send single chimes
-    sound2 = 1
+    sound2 = 0
 
   return steer, fcw, sound1, sound2
 
